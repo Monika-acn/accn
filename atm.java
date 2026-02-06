@@ -1,2 +1,7 @@
-print("Hello")
-print("The version is updated")
+class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}
+
+
