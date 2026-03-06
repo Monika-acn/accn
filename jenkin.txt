@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Start') {
+            steps {
+                // Task 3: Print start message
+                echo "Pipeline execution has started."
+            }
+        }
+        stage('Checkout') {
+            steps {
+                // Task 1: Checkout (Implicit in Pipeline from SCM)
+                checkout scm
+            }
+        }
+        stage('Workspace Info') {
+            steps {
+                // Task 2: Display workspace path
+                echo "The Jenkins workspace path is: ${env.WORKSPACE}"
+            }
+        }
+    }
+}
